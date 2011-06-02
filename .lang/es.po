@@ -1,0 +1,149 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2002-11-01 04:27+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .project:1
+msgid "Flash Cart GUI"
+msgstr ""
+
+#: About.class:41 FMain.class:250
+msgid "About"
+msgstr "Acerca de"
+
+#: About.class:60
+msgid ""
+"This is a GUI for the ems flasher, a program made for using <b>GB SMARTCART "
+"64 Mbit </b>in Linux. <br> <br> All the credits are for <a href=\"http://"
+"lacklustre.net/redmine/projects/ems-flash/wiki\">Mike Ryan</a>. <br> <br> "
+"This program was created by <b><a href=\"https://github.com/clsource"
+"\">Camilo Castro</a></b> and is released under the <a href=\"http://www.gnu."
+"org/licenses/gpl-3.0-standalone.html\"> GNU GPL3 License</a>"
+msgstr ""
+
+#: About.class:66
+msgid "Version 0.01"
+msgstr ""
+
+#: About.class:69
+msgid "Thanks"
+msgstr "Agradecimientos"
+
+#: About.class:78
+msgid ""
+"I would like to thank the following people: <br><br> <a href=\"www.analog.cl"
+"\">Ernesto Muñoz (Analog)</a>"
+msgstr ""
+
+#: About.class:84
+msgid ""
+"Gameboy Image by <a href=\"http://trentvermin.deviantart.com\">TrentVermin</"
+"a>"
+msgstr ""
+
+#: About.class:92
+msgid "OK"
+msgstr "Aceptar"
+
+#: FMain.class:32
+msgid "File Name"
+msgstr "Ruta"
+
+#: FMain.class:35
+msgid "Game Name"
+msgstr "Nombre"
+
+#: FMain.class:38
+msgid "Size"
+msgstr "Tamaño"
+
+#: FMain.class:56
+msgid "Please select a (totally legit) rom"
+msgstr "Porfavor selecciona una rom (legal)"
+
+#: FMain.class:57
+msgid "Gameboy / Gameboy Color Roms"
+msgstr ""
+
+#: FMain.class:81
+msgid "Ready to Burn (Size: 32 M, Free: "
+msgstr "Listo para escribir (Tamaño: 32M, Libre: "
+
+#: FMain.class:143
+msgid "Please select a place for the rom"
+msgstr ""
+
+#: FMain.class:185
+msgid "EMS FLASHER GUI"
+msgstr ""
+
+#: FMain.class:191
+msgid "Ready to Burn"
+msgstr "Listo para escribir"
+
+#: FMain.class:195
+msgid "Data Page:"
+msgstr "Página:"
+
+#: FMain.class:209
+msgid "&Add"
+msgstr "&Añadir"
+
+#: FMain.class:214
+msgid "&Remove"
+msgstr "Eli&minar"
+
+#: FMain.class:219
+msgid "Re&move All"
+msgstr "Eliminar &Todos"
+
+#: FMain.class:225
+msgid "&Write"
+msgstr "Escri&bir"
+
+#: FMain.class:230
+msgid "Write &SRAM"
+msgstr "Es&cribir SRAM"
+
+#: FMain.class:235
+msgid "Color"
+msgstr ""
+
+#: FMain.class:242
+msgid "Page NO 1 (32 M)"
+msgstr "Página NUM 1 (32 M)"
+
+#: FMain.class:242
+msgid "Page NO 2 (32 M)"
+msgstr "Página NUM 2 (32 M)"
+
+#: FMain.class:255
+msgid "Device: "
+msgstr "Estado:"
+
+#: FMain.class:261
+msgid "Disconnected"
+msgstr "Desconectado"
+
+#: FMain.class:268
+msgid "Cart Information"
+msgstr "Información del Cartucho"
+
+#: FMain.class:279
+msgid "R&ead"
+msgstr "&Leer"
+
+#: FMain.class:284
+msgid "Rea&d SRAM"
+msgstr "L&eer SRAM"
+
+#: FMain.class:289
+msgid "&Format"
+msgstr "&Formatear"

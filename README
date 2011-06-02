@@ -1,0 +1,11 @@
+The EMS flasher is a simple command line flasher for the 64 Mbit EMS USB
+flash cart for Game Boy.
+
+Written by Mike Ryan <mikeryan \at lacklustre.net>
+
+This software is a GUI for that program. written in gambas basic
+by Camilo Castro <camilo.castro.cabrera \at gmail.com>
+
+BUGS
+I tried to emulate de Windows GB USB SMARTCART application, but there is a lot to do.
+Mainly because EMS flasher don't support all the feactures yet.  

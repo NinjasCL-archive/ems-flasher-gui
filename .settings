@@ -1,0 +1,26 @@
+[Breakpoints]
+Count=0
+
+[DebugWindow]
+Count=0
+
+[DebugWindow/gridBurnList[gridBurnList.Row, 0]]
+Geometry=[0,0,301,301]
+
+[FFind]
+SearchIn="Module"
+CaseSensitive=False
+SearchWord=False
+SearchComment=False
+SearchString=True
+
+[OpenFile]
+File[1]="FMain.form"
+File[2]="FMain.class:127.48"
+Active=2
+File[3]="About.form"
+Count=3
+
+[Watches]
+Count=0
+

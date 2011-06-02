@@ -1,0 +1,155 @@
+' Gambas class file
+' This is a GUI for the ems flasher made by Mike Ryan <http://lacklustre.net/redmine/projects/ems-flash/wiki>
+' Copyright(C) 2011 < Camilo Castro >
+' 
+' This program IS free software: you can redistribute it AND / OR modify
+' it under the terms OF the GNU General PUBLIC License AS published by
+' the Free Software Foundation, either version 3 OF the License, OR
+' any later version.
+' 
+' This program IS distributed IN the hope that it will be useful,
+' but WITHOUT ANY WARRANTY; without even the implied warranty OF
+' MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.See the
+' GNU General PUBLIC License FOR more details.
+' 
+' You should have received a COPY OF the GNU General PUBLIC License
+' along WITH this program.IfNOT, see < http://www.gnu.org/licenses/ > .
+    
+PUBLIC row AS Integer = 0 ' Row counter
+PUBLIC total_size AS Float = 0 ' Total size 
+PUBLIC free_space AS Float = 32 ' Total free space
+ 
+PUBLIC SUB _new()
+
+
+END
+
+PUBLIC SUB Form_Open()
+  ' Burn List
+  gridBurnList.Columns.Count = 3
+  gridBurnList.Rows.Count = 10
+  
+  gridBurnList.Columns[0].Text = ("File Name")
+  gridBurnList.Columns[0].Width = 300
+  
+  gridBurnList.Columns[1].Text = ("Game Name")
+  gridBurnList.Columns[1].Width = 300
+  
+  gridBurnList.Columns[2].Text = ("Size")
+  
+  ' Info List
+  gridInfoList.Columns.Count = 2
+  gridInfoList.Rows.Count = 10
+  
+  gridInfoList.Columns[0].Text = ("Game Name")
+  gridInfoList.Columns[0].Width = 600
+  
+  gridInfoList.Columns[1].Text = ("Size")
+
+END
+
+PUBLIC SUB btnAdd_Click()
+  DIM rom AS File ' Rom file for reading header
+  DIM rom_name AS String ' For Storing the Game Name
+  DIM rom_size AS Float ' Size of the Rom file
+  
+  Dialog.Title = ("Please select a (totally legit) rom")
+  Dialog.Filter = ["*.gb;*.gbc", ("Gameboy / Gameboy Color Roms")]
+  
+  IF Dialog.OpenFile() THEN RETURN ' User pressed cancel
+  
+  rom_size = (Stat(Dialog.Path).Size / 1048576) * 8
+  
+  ' Read the Rom Name
+  rom = OPEN Dialog.Path FOR READ
+  SEEK #rom, 308 ' Skip all the junk
+  READ #rom, rom_name, 16 ' read enough data
+  CLOSE #rom
+  
+  PRINT rom_name
+  
+  ' Add the new game to list
+  gridBurnList[row, 0].Text = Dialog.Path
+  gridBurnList[row, 1].Text = rom_name
+  gridBurnList[row, 2].Text = rom_size & "M"
+  
+  row = row + 1
+  total_size = total_size + rom_size
+  free_space = 32 - total_size
+  
+  ' Update the status
+  frameReady.Text = ("Ready to Burn (Size: 32 M, Free: ") & free_space & " M)"
+
+END
+
+PUBLIC SUB btnRemove_Click()
+  DIM rom_size AS Float
+  DIM file_path AS String
+  
+  file_path = gridBurnList[gridBurnList.Row, 0].Text
+  
+  IF file_path = NULL THEN RETURN 
+  
+  rom_size = (Stat(file_path).Size / 1048576) * 8
+  total_size = total_size - rom_size
+  free_space = free_space + rom_size
+  
+  IF row > 0 THEN row = row - 1
+  
+  gridBurnList.Rows.Remove(gridBurnList.Row)
+  
+  ' Update the status
+  frameReady.Text = ("Ready to Burn (Size: 32 M, Free: ") & free_space & " M)"
+END
+
+PUBLIC SUB btnRemoveAll_Click()
+  total_size = 0
+  free_space = 32
+  row = 0
+  gridBurnList.Clear
+  
+  ' Update the status
+  frameReady.Text = ("Ready to Burn (Size: 32 M, Free: ") & free_space & " M)"
+END
+
+
+PUBLIC SUB lblAbout_MouseDown()
+  About.Show()
+END
+
+PUBLIC SUB btnWrite_Click()
+  DIM file_path AS String
+  
+  ' Will write only the first file
+  ' more to come when ems flasher support multiple files
+  
+  file_path = gridBurnList[0, 0].Text
+  
+  IF file_path = NULL THEN RETURN
+  
+  ' Fix some troubles, quote the path
+  'file_path = Quote.Shell(file_path)
+  file_path = "\"" & file_path & "\""
+  
+  PRINT file_path
+  
+  SHELL "ems-flasher --write " & file_path WAIT
+
+END
+
+PUBLIC SUB btnRead_Click()
+  DIM file_path AS String
+  
+  Dialog.Title = ("Please select a place for the rom")
+  Dialog.Filter = ["*.gb;*.gbc", ("Gameboy / Gameboy Color Roms")]
+  
+  IF Dialog.SaveFile() THEN RETURN
+  
+  file_path = Dialog.Path
+  file_path = "\"" & file_path & "\""
+  
+  PRINT file_path 
+  
+  SHELL "ems-flasher --read " & file_path WAIT 
+
+END

@@ -1,0 +1,55 @@
+# Gambas Form File 2.0
+
+{ Form Form
+  Move(0,0,399,322)
+  #(Scaled) = False
+  Text = ("About")
+  Persistent = True
+  Border = Window.Fixed
+  Stacking = Window.Above
+  SkipTaskbar = True
+  { TabStrip1 TabStrip
+    Move(0,7,399,280)
+    Count = 2
+    Index = 0
+    Text = ("About")
+    { PictureBox1 PictureBox
+      Move(14,28,77,56)
+      Picture = Picture["gameboy.png"]
+    }
+    { TextLabel1 TextLabel
+      Move(126,21,266,217)
+      Text = ("This is a GUI for the ems flasher, a program made for using <b>GB SMARTCART 64 Mbit </b>in Linux. <br> <br> All the credits are for <b>Mike Ryan</b> http://lacklustre.net/redmine/projects/<br>ems-flash/wiki. <br> <br> This program was created by <b>Camilo Castro</b> https://github.com/clsource<br> and is released under the GNU GPL3 License ")
+    }
+    { Label1 Label
+      Move(14,98,91,21)
+      Font = Font["Bold"]
+      Text = ("Version 0.01")
+    }
+    Index = 1
+    Text = ("Thanks")
+    { PictureBox2 PictureBox
+      Move(14,28,77,56)
+      Picture = Picture["gameboy.png"]
+    }
+    { TextLabel2 TextLabel
+      Move(126,21,245,210)
+      Text = ("I would like to thank the following people: <br><br> Ernesto Mu\xC3\xB1oz (Analog) http://www.analog.cl <br> <br>For being a great friend and teaching me the fundamentals of chiptune.")
+    }
+    { TextLabel3 TextLabel
+      Move(126,175,238,56)
+      Text = ("Gameboy Image by <b>TrentVermin</b> http://trentvermin.deviantart.com")
+      Alignment = Align.Justify
+    }
+    { Label2 Label
+      Move(14,98,91,21)
+      Font = Font["Bold"]
+      Text = ("Version 0.01")
+    }
+    Index = 0
+  }
+  { btnOK Button
+    Move(140,294,112,21)
+    Text = ("OK")
+  }
+}

@@ -1,0 +1,11 @@
+# Gambas Project File 2.0
+# Compiled with Gambas 2.19.0
+Title=Flash Cart GUI
+Startup=FMain
+Version=0.0.1
+Library=gb.gui
+Library=gb.form
+TabSize=2
+Translate=1
+Language=es_CL.utf8
+SourcePath=/home/camilo/Programacion/gambas/gb_usb/GbFlashCartGui

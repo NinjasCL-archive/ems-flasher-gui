@@ -1,0 +1,99 @@
+# Gambas Form File 2.0
+
+{ Form Form
+  MoveScaled(0,0,101,66)
+  Text = ("EMS FLASHER GUI")
+  Icon = Picture["gameboy.png"]
+  Border = Window.Fixed
+  { frameReady Frame
+    MoveScaled(0,0,101,31)
+    Font = Font["Bold"]
+    Text = ("Ready to Burn")
+    { lblDataPage Label
+      MoveScaled(1,4,24,3)
+      Text = ("Data Page:")
+    }
+    { gridBurnList GridView
+      MoveScaled(1,9,99,16)
+      Drop = True
+      Mode = Select.Single
+      Header = GridView.Horizontal
+      Scrollbar = Scroll.Vertical
+      Resizable = False
+    }
+    { btnAdd Button
+      MoveScaled(2,27,16,3)
+      Text = ("&Add")
+    }
+    { btnRemove Button
+      MoveScaled(20,27,16,3)
+      Text = ("&Remove")
+    }
+    { btnRemoveAll Button
+      MoveScaled(38,27,16,3)
+      Text = ("Re&move All")
+    }
+    { btnWrite Button
+      MoveScaled(56,27,16,3)
+      Foreground = &HC00000&
+      Text = ("&Write")
+    }
+    { btnWriteSram Button
+      MoveScaled(73,27,16,3)
+      Text = ("Write &SRAM")
+    }
+    { chkColor CheckBox
+      MoveScaled(92,27,8,3)
+      Text = ("Color")
+    }
+    { cbxDataPage ComboBox
+      MoveScaled(14,4,24,3)
+      Drop = True
+      Text = ("")
+      List = [("Page NO 1 (32 M)"), ("Page NO 2 (32 M)")]
+    }
+    { lblAbout Label
+      MoveScaled(93,4,6,3)
+      Font = Font["Underline"]
+      Foreground = &H0000C0&
+      Mouse = Mouse.Pointing
+      Text = ("About")
+    }
+    { lblDevice Label
+      MoveScaled(42,4,9,3)
+      Text = ("Device: ")
+    }
+    { lblStatus Label
+      MoveScaled(50,4,15,3)
+      Foreground = &HFF0000&
+      Text = ("Disconnected")
+    }
+  }
+  { frameInfo Frame
+    MoveScaled(0,32,101,29)
+    Font = Font["Bold"]
+    Text = ("Cart Information")
+    { gridInfoList GridView
+      MoveScaled(1,3,99,16)
+      Header = GridView.Horizontal
+      Scrollbar = Scroll.Vertical
+      Resizable = False
+    }
+    { btnRead Button
+      MoveScaled(23,23,16,3)
+      Text = ("R&ead")
+    }
+    { btnReadSram Button
+      MoveScaled(41,23,16,3)
+      Text = ("Rea&d SRAM")
+    }
+    { btnFormat Button
+      MoveScaled(60,23,16,3)
+      Text = ("&Format")
+    }
+  }
+  { progBar ProgressBar
+    MoveScaled(1,62,99,3)
+    Font = Font["Bold"]
+  }
+}
