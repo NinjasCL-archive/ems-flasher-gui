@@ -7,5 +7,5 @@ This software is a GUI for that program. written in gambas basic
 by Camilo Castro <camilo.castro.cabrera \at gmail.com>
 
 BUGS
-I tried to emulate de Windows GB USB SMARTCART application, but there is a lot to do.
+I tried to emulate the Windows GB USB SMARTCART application, but there is a lot to do.
 Mainly because EMS flasher don't support all the feactures yet.  
