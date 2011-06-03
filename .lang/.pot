@@ -1,0 +1,149 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2002-11-01 04:27+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .project:1 FMain.class:185
+msgid "EMS FLASHER GUI"
+msgstr ""
+
+#: .project:2
+msgid ""
+"This is a GUI for the ems flasher made by Mike Ryan <http://lacklustre.net/"
+"redmine/projects/ems-flash/wiki>"
+msgstr ""
+
+#: About.class:42 FMain.class:251
+msgid "About"
+msgstr ""
+
+#: About.class:61
+msgid ""
+"This is a GUI for the ems flasher, a program made for using <b>GB SMARTCART "
+"64 Mbit </b>in Linux. <br> <br> All the credits are for <b>Mike Ryan</b> "
+"http://lacklustre.net/redmine/projects/<br>ems-flash/wiki. <br> <br> This "
+"program was created by <b>Camilo Castro</b> https://github.com/clsource<br> "
+"and is released under the GNU GPL3 License "
+msgstr ""
+
+#: About.class:67
+msgid "Version 0.01"
+msgstr ""
+
+#: About.class:70
+msgid "Thanks"
+msgstr ""
+
+#: About.class:79
+msgid ""
+"I would like to thank the following people: <br><br> Ernesto Muñoz (Analog) "
+"http://www.analog.cl <br> <br>For being a great friend and teaching me the "
+"fundamentals of chiptune."
+msgstr ""
+
+#: About.class:84
+msgid "Gameboy Image by <b>TrentVermin</b> http://trentvermin.deviantart.com"
+msgstr ""
+
+#: About.class:98
+msgid "OK"
+msgstr ""
+
+#: FMain.class:32
+msgid "File Name"
+msgstr ""
+
+#: FMain.class:35
+msgid "Game Name"
+msgstr ""
+
+#: FMain.class:38
+msgid "Size"
+msgstr ""
+
+#: FMain.class:56
+msgid "Please select a (totally legit) rom"
+msgstr ""
+
+#: FMain.class:57
+msgid "Gameboy / Gameboy Color Roms"
+msgstr ""
+
+#: FMain.class:81
+msgid "Ready to Burn (Size: 32 M, Free: "
+msgstr ""
+
+#: FMain.class:143
+msgid "Please select a place for the rom"
+msgstr ""
+
+#: FMain.class:192
+msgid "Ready to Burn"
+msgstr ""
+
+#: FMain.class:196
+msgid "Data Page:"
+msgstr ""
+
+#: FMain.class:210
+msgid "&Add"
+msgstr ""
+
+#: FMain.class:215
+msgid "&Remove"
+msgstr ""
+
+#: FMain.class:220
+msgid "Re&move All"
+msgstr ""
+
+#: FMain.class:226
+msgid "&Write"
+msgstr ""
+
+#: FMain.class:231
+msgid "Write &SRAM"
+msgstr ""
+
+#: FMain.class:236
+msgid "Color"
+msgstr ""
+
+#: FMain.class:243
+msgid "Page NO 1 (32 M)"
+msgstr ""
+
+#: FMain.class:243
+msgid "Page NO 2 (32 M)"
+msgstr ""
+
+#: FMain.class:256
+msgid "Device: "
+msgstr ""
+
+#: FMain.class:262
+msgid "Disconnected"
+msgstr ""
+
+#: FMain.class:269
+msgid "Cart Information"
+msgstr ""
+
+#: FMain.class:280
+msgid "R&ead"
+msgstr ""
+
+#: FMain.class:285
+msgid "Rea&d SRAM"
+msgstr ""
+
+#: FMain.class:290
+msgid "&Format"
+msgstr ""
