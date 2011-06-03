@@ -1,11 +1,24 @@
 # Gambas Project File 2.0
 # Compiled with Gambas 2.19.0
-Title=Flash Cart GUI
+Title=EMS FLASHER GUI
 Startup=FMain
-Version=0.0.1
+Icon=gameboy.png
+Version=0.0.0
 Library=gb.gui
 Library=gb.form
+Description=This is a GUI for the ems flasher made by Mike Ryan <http://lacklustre.net/redmine/projects/ems-flash/wiki>
+Authors=Copyright(C) 2011 < Camilo Castro >
 TabSize=2
 Translate=1
-Language=es_CL.utf8
-SourcePath=/home/camilo/Programacion/gambas/gb_usb/GbFlashCartGui
+Language=en_US
+KeepDebugInfo=1
+SourcePath=/home/camilo/Programacion/gambas/gb_usb/ems-flasher-gui
+Maintainer=Camilo Castro
+Address=camilo.castro.cabrera@gmail.com
+License=General Public Licence 3
+Prefix=1
+UseRelease=1
+Systems=ubuntu
+Menus=
+Categories=
+Groups=
